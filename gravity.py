@@ -111,6 +111,22 @@ class Galaxy():
             "show": K_q
         }
     }
+    controlls_names = {
+        "zoom":{
+            "in":"Up",
+            "out":"Down",
+            "reset":"Left Control"
+        },
+        "move":{
+            "up" : "W",
+            "down" : "S",
+            "left" : "A",
+            "right" : "D",
+        },
+        "tracer":{
+            "show": "Q"
+        }
+    }
 
     def __init__(self,planets,window,window_width,window_heigth,zoom=1):
         # params
