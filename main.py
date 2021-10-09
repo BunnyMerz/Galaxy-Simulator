@@ -1,6 +1,6 @@
 import pygame
 from gravity import *
-# from random import randint as rng
+from random import randint as rng
 # from math import pi
 
 height = 600
@@ -50,6 +50,14 @@ if __name__ == "__main__":
     blue = Planet(mass=10,radius=10,x=500,y=0,speed=Vector2(100,200),color=(20,100,200))
     green = Planet(mass=20,radius=15,x=1000,y=1000,speed=Vector2(120,-120),color=(30,200,100))
     hasmoon = Planet(mass=100,radius=60,x=4000,y=2000,speed=Vector2(120,-60),color=(37,100,150))
-    hasmoonsmoon = Planet(mass=10,radius=7,x=4160,y=2000,speed=Vector2(120,-130),color=(100,100,100))
-    galaxy = Galaxy([sun,blue,green,hasmoon,hasmoonsmoon],window,width,height,zoom=0.14)
+    hasmoonsmoon = Planet(mass=10,radius=9,x=4160,y=2000,speed=Vector2(120,-130),color=(100,120,120))
+    hasmoonsmoon2 = Planet(mass=10,radius=7,x=4000-160,y=2000,speed=Vector2(120,20),color=(120,100,100))
+    galaxy = Galaxy([sun,blue,green,hasmoon,hasmoonsmoon,hasmoonsmoon2],window,width,height,zoom=0.14)
+
+    ###
+    # p1 = Planet(mass=1000,radius=20,x=0,y=0,speed=Vector2(0,0),color=(200,200,100))
+    # p2 = Planet(mass=10,radius=10,x=500,y=0,speed=Vector2(0,-100),color=(200,200,100))
+    # p3 = Planet(mass=1,radius=3,x=540,y=0,speed=Vector2(0,-130),color=(200,200,100))
+    # galaxy = Galaxy([p1,p2,p3],window,width,height,zoom=1)
+    ###
     run(galaxy)
